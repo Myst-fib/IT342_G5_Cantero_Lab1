@@ -1,0 +1,99 @@
+/* ===== COLOR VARIABLES ===== */
+:root {
+  /* Primary Colors */
+  --primary-dark: #667eea;
+  --primary-light: #764ba2;
+  
+  /* Neutral Colors */
+  --white: #ffffff;
+  --black: #000000;
+  --text-dark: #333333;
+  --text-medium: #555555;
+  --text-light: #666666;
+  
+  /* Border & Background Colors */
+  --border-light: #dddddd;
+  --bg-light: #f5f5f5;
+  
+  /* Status Colors */
+  --success: #4caf50;
+  --error: #f44336;
+  --warning: #ff9800;
+  --info: #2196f3;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-dark: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* ===== TEXT COLOR UTILITIES ===== */
+.text-dark {
+  color: var(--text-dark);
+}
+
+.text-medium {
+  color: var(--text-medium);
+}
+
+.text-light {
+  color: var(--text-light);
+}
+
+.text-primary {
+  color: var(--primary-dark);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.text-error {
+  color: var(--error);
+}
+
+.text-success {
+  color: var(--success);
+}
+
+.text-warning {
+  color: var(--warning);
+}
+
+/* ===== BACKGROUND COLOR UTILITIES ===== */
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-light {
+  background-color: var(--bg-light);
+}
+
+.bg-primary {
+  background: var(--gradient-primary);
+}
+
+.bg-error {
+  background-color: var(--error);
+}
+
+.bg-success {
+  background-color: var(--success);
+}
+
+/* ===== BORDER COLOR UTILITIES ===== */
+.border-light {
+  border-color: var(--border-light);
+}
+
+.border-primary {
+  border-color: var(--primary-dark);
+}
+
+/* ===== HOVER STATE UTILITIES ===== */
+.hover-primary:hover {
+  color: var(--primary-dark);
+}
+
+.hover-text-light:hover {
+  color: var(--primary-light);
+}

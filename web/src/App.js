@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import './App.css';
+import Register from './components/pages/Register';
+import Login from './components/pages/Login';
+import Dashboard from './components/pages/Dashboard';
+import NavBar from './components/common/NavBar';
+
+function AppLayout() {
+  const location = useLocation();
+  
+  // Show navbar only on authenticated routes (dashboard, etc.)
+  const authenticatedRoutes = ['/dashboard'];
+  const showNavBar = authenticatedRoutes.some(route => location.pathname.startsWith(route));
+
+  return (
+    <>
+      {showNavBar && <NavBar />}
+      <Routes>
+        <Route path="/" element={<Navigate to="/register" />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <AppLayout />
+    </Router>
   );
 }
 
