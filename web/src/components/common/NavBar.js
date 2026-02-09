@@ -27,7 +27,9 @@ function NavBar() {
           <div className="nav-brand">MyApp</div>
           <div className="nav-links">
             <NavLink to="/dashboard" className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}>Dashboard</NavLink>
+            <NavLink to="/borrow" className={({isActive }) => 'nav-link' + (isActive ? ' active': '')}>Borrow</NavLink>
             <button className="nav-logout" onClick={requestLogout}>Logout</button>
+
           </div>
         </div>
       </nav>

@@ -18,9 +18,9 @@
 
 .login-box h2 {
   text-align: center;
-  color: var(--text-dark);
-  margin-bottom: 30px;
-  font-size: 24px;
+  color: var(--primary-light);
+  margin-bottom: 45px;
+  font-size: 34px;
   font-weight: 600;
 }
 
@@ -32,9 +32,33 @@
 
 .form-group label {
   margin-bottom: 8px;
-  color: var(--text-medium);
+  color: var(--text-dark);
   font-weight: 500;
   font-size: 14px;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  opacity: 0.6;
+}
+
+.input-with-icon input {
+  width: 100%;
+  padding: 12px 12px 12px 40px; /* space for icon */
+  border: 1px solid var(--border-light);
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+  text-indent: 30px;
 }
 
 .form-group input {
