@@ -8,7 +8,7 @@ function Dashboard() {
   useEffect(() => {
     fetch("http://localhost:8080/api/user/me", {
       method: "GET",
-      credentials: "include", // 🔥 VERY IMPORTANT (session)
+      credentials: "include", //VERY IMPORTANT (session)
     })
       .then(res => {
         if (!res.ok) {
