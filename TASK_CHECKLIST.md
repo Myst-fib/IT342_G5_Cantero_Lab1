@@ -2,6 +2,7 @@
 
 [![Backend Status](https://img.shields.io/badge/Backend-Complete-brightgreen)](https://github.com/Myst-fib/IT342_G5_Cantero_Lab1)
 [![Frontend Status](https://img.shields.io/badge/Frontend-Complete-brightgreen)](https://github.com/Myst-fib/IT342_G5_Cantero_Lab1)
+[![Mobile Status](https://img.shields.io/badge/Mobile-In%20Progress-blue)](https://github.com/Myst-fib/IT342_G5_Cantero_Lab1)
 [![Testing Status](https://img.shields.io/badge/Testing-Pending-yellow)](https://github.com/Myst-fib/IT342_G5_Cantero_Lab1)
 
 ---
@@ -23,13 +24,15 @@ The project implements user authentication, dashboard management, and profile fu
 - 🟢 Initial commit for `README.md` (`6411b8c`)
 - 🟢 Created folder structures (`f6010c1`)
 - 🟢 Created common pages: **Login**, **Register**, **Dashboard**, **Profile** (`dbaaab7`)
-- 🟢 Fully functional backend for **User** entity, controller, service, DTO, repository, and configuration (`7927959`)
+- 🟢 Fully functional backend for **User** entity, controller, service, DTO, repository, and configuration 
+(`7927959`)
+- 🟢 Completed Login, register, and dashboard screens for mobile ('dea07f6')
 
 ### In-Progress
 - 🟡 Enhancing UI designs and fixing bugs/errors
 
 ### Todo
-- 🟠 Mobile application (none yet)
+- 🟠 Dashboard for mobile application
 
 ---
 
@@ -39,6 +42,7 @@ The project implements user authentication, dashboard management, and profile fu
 |----------------|------------|--------------------------------|
 | Backend API    | ✅ Complete | 3 endpoints, MySQL, BCrypt     |
 | Frontend UI    | ✅ Complete | 4 pages, React Router          |
+| Mobile UI      | 🔄 In Progress | Login, Register, Dashboard    |
 | Documentation  | ✅ Complete | README & Code Documentation    |
 | Testing        | ⏳ TODO     | Unit & Integration Tests       |
 
