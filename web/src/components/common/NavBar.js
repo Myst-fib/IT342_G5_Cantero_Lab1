@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import '../../styles/NavBar.css';
+import logo from '../assets/logpoint_logo.png';
 
 function NavBar() {
   const navigate = useNavigate();
@@ -24,10 +25,13 @@ function NavBar() {
     <>
       <nav className="app-nav">
         <div className="nav-inner">
-          <div className="nav-brand">MyApp</div>
+          <NavLink to="/dashboard" className="nav-brand">
+            <img src={logo} alt="LogPoint" className="nav-brand-logo" />
+          </NavLink>
           <div className="nav-links">
             <NavLink to="/dashboard" className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}>Dashboard</NavLink>
-            <NavLink to="/borrow" className={({isActive }) => 'nav-link' + (isActive ? ' active': '')}>Borrow</NavLink>
+            <NavLink to="/profile" className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}>Profile</NavLink>
+            <NavLink to="/borrow" className={({isActive }) => 'nav-link' + (isActive ? ' active': '')}>Record</NavLink>
             <button className="nav-logout" onClick={requestLogout}>Logout</button>
 
           </div>

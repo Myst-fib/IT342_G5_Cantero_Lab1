@@ -19,6 +19,15 @@
   font-weight: 700;
   color: var(--primary-dark);
   font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-brand-logo {
+  height: 50px;
+  display: block;
+  cursor: pointer;
 }
 
 .nav-links {

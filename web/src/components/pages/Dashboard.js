@@ -41,30 +41,6 @@ function Dashboard() {
       </div>
 
       <div className="dashboard-content">
-        <aside className="profile-card">
-          <div className="avatar">
-            {user.avatarUrl ? (
-              <img src={user.avatarUrl} alt="avatar" />
-            ) : (
-              <div className="avatar-fallback">
-                {user.firstName.charAt(0)}
-              </div>
-            )}
-          </div>
-
-          <div className="profile-info">
-            <h2 className="profile-name">
-              {user.firstName} {user.lastName}
-            </h2>
-            <p className="profile-email">{user.email}</p>
-          </div>
-
-          <div className="profile-actions">
-            <button className="btn btn-primary">Edit Profile</button>
-            <button className="btn btn-outline">Settings</button>
-          </div>
-        </aside>
-
         <main className="dashboard-main">
           <section className="card">
             <h3>Welcome</h3>

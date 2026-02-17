@@ -51,7 +51,7 @@ The project implements user authentication, dashboard management, and profile fu
 ## 🚀 Next Steps
 1. Complete UI enhancements and bug fixes  
 2. Write unit and integration tests for backend and frontend  
-3. Start development of mobile application
+3. Continue development of mobile application
 
 ---
 
