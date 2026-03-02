@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+/* App.css */
+.main-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Ensure proper font loading */
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+}
+
+/* Import DM Sans font if not already in index.html */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap');

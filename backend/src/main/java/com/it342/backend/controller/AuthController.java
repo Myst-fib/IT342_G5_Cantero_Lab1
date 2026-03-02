@@ -26,6 +26,12 @@ public class AuthController {
         user.setLastName(req.lastName);
         user.setEmail(req.email);
         user.setPassword(req.password);
+        // set role if provided
+        if (req.role != null && !req.role.isBlank()) {
+            user.setRole(req.role);
+        }
+        // set initial status
+        user.setStatus("ACTIVE");
 
         userService.register(user);
         return ResponseEntity.ok("User registered successfully");
