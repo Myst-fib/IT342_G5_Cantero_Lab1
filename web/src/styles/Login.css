@@ -19,7 +19,8 @@
 .login-box h2 {
   text-align: center;
   color: var(--primary-light);
-  margin-bottom: 45px;
+  margin-bottom: 35px;
+  margin-top: -2px;
   font-size: 34px;
   font-weight: 600;
 }
@@ -71,7 +72,7 @@
 
 .form-group input:focus {
   outline: none;
-  border-color: var(--primary-dark);
+  border-color: var(--primary-light);
   box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
 }
 

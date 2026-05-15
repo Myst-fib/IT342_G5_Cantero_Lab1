@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../styles/Login.css';
-import emailIcon from '../assets/email.png'
-import passwordIcon from '../assets/password.png'
+import EmailIcon from '@mui/icons-material/Email';
+import LockIcon from '@mui/icons-material/Lock';
 
 function Login() {
   const navigate = useNavigate();
@@ -44,8 +44,9 @@ function Login() {
     const user = await response.json();
     console.log("Logged in user:", user);
 
-    // Store login flag (simple session marker)
+    // Store login flag and user details
     localStorage.setItem("isLoggedIn", "true");
+    localStorage.setItem("user", JSON.stringify(user));
 
     navigate("/dashboard");
 
@@ -68,7 +69,7 @@ function Login() {
           <div className="form-group">
             <label htmlFor="username">Username</label>
             <div className="input-with-icon">
-              <img src={emailIcon} alt="Email Icon" className="input-icon" />
+              <EmailIcon className="input-icon" />
               <input
                 type="text"
                 id="username"
@@ -85,7 +86,7 @@ function Login() {
           <div className="form-group">
             <label htmlFor="password">Password</label>
             <div className="input-with-icon">
-              <img src={passwordIcon} alt="Password Icon" className="input-icon" />
+              <LockIcon className="input-icon" />
               <input
                 type="password"
                 id="password"
