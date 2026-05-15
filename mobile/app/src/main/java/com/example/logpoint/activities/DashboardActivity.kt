@@ -38,7 +38,7 @@ class DashboardActivity : AppCompatActivity() {
     }
 
     private fun loadUserInfo() {
-        val username = sessionManager.getUsername()
-        tvWelcome.text = "Welcome, $username!"
+        val firstName = sessionManager.getFirstName()
+        tvWelcome.text = "Welcome, $firstName!"
     }
 }
