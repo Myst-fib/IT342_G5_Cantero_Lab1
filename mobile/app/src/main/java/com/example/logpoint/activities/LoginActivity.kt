@@ -42,7 +42,7 @@ class LoginActivity : AppCompatActivity() {
         sessionManager = SessionManager(this)
 
         if (sessionManager.isLoggedIn()) {
-            navigateToDashboard()
+            navigateByRole()
             return
         }
 
@@ -107,7 +107,7 @@ class LoginActivity : AppCompatActivity() {
                     if (user != null) {
                         sessionManager.saveLoginSession(user)
                         Toast.makeText(this@LoginActivity, "Welcome back!", Toast.LENGTH_SHORT).show()
-                        navigateToDashboard()
+                        navigateByRole()
                     } else {
                         showError("Login failed: empty response")
                     }
@@ -125,6 +125,18 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    /** Route to the correct dashboard based on role stored in session */
+    private fun navigateByRole() {
+        val role = sessionManager.getRole()?.lowercase() ?: ""
+        val intent = when {
+            role.contains("admin") -> Intent(this, AdminDashboardActivity::class.java)
+            else                   -> Intent(this, GuardDashboardActivity::class.java)
+        }
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
+        finish()
+    }
+
     private fun showLoading(isLoading: Boolean) {
         progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
         btnLogin.isEnabled = !isLoading
@@ -133,10 +145,5 @@ class LoginActivity : AppCompatActivity() {
     private fun showError(message: String) {
         tvError.text = message
         tvError.visibility = View.VISIBLE
-    }
-
-    private fun navigateToDashboard() {
-        startActivity(Intent(this, DashboardActivity::class.java))
-        finish()
     }
 }
